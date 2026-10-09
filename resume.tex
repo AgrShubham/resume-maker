@@ -1,0 +1,165 @@
+%-------------------------
+% Resume in LaTeX
+% Author : Shubham Agrawal
+% Based on: Jake Gutierrez template (ATS 100/100)
+% License : MIT
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shubham Agrawal} \\ \vspace{2pt}
+    \small +91 8825388041 $|$ \href{mailto:shubhamagrawal.code@gmail.com}{\underline{shubhamagrawal.code@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/shubham-agrawal-dev}{\underline{linkedin.com/in/shubham-agrawal-dev}} $|$
+    \href{https://github.com/AgrShubham}{\underline{github.com/AgrShubham}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Institute of Engineering and Science, IPS Academy}{Indore, India}
+      {Bachelor of Technology in Computer Science \& Engineering}{Sep 2021 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Operating Systems, Computer Networks, DBMS, OOP.}
+        \resumeItem{\textbf{Honors \& Awards:} \textbf{2nd Position (Runner-up)} -- Udaan 2024 CSI (Computer Society of India) National Project Exhibition.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript (ES6+), Python, Java, C, SQL} \\
+     \textbf{Frontend \& Mobile}{: React 19, React Native, Next.js, Tailwind CSS, Vite, HTML5 Canvas, Web Audio API} \\
+     \textbf{Backend \& Systems}{: Node.js, Express, Flask, RESTful APIs, WebSockets (Socket.IO), UDP Sockets, Win32 API (user32.dll)} \\
+     \textbf{Databases \& Cloud}{: PostgreSQL, MySQL, MongoDB, AWS (EC2, S3, IAM, VPC), Supabase} \\
+     \textbf{Developer Tools}{: Git, GitHub, Linux / Bash, Android Studio, Postman, Chrome DevTools, VS Code}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Amnesea}{Remote}
+      {Frontend Web Development Intern}{May 2023 -- July 2023}
+      \resumeItemListStart
+        \resumeItem{Architected 15+ modular React.js and Tailwind CSS components, establishing unified design tokens and reducing redundant styling code across 8+ core product pages.}
+        \resumeItem{Streamlined RESTful API data-fetching pipelines and code-split dynamic bundles, cutting initial page-load latency by \textbf{35\%} (verified via Google Lighthouse audits).}
+        \resumeItem{Diagnosed and resolved 20+ cross-browser compatibility and breakpoint discrepancies, elevating mobile responsiveness and boosting user session retention by \textbf{20\%}.}
+        \resumeItem{Partnered with cross-functional backend engineering teams to define clean JSON API schemas and robust client-side error handling.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Featured Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Remote Trackpad \& Gamepad Pro} $|$ \emph{React Native, TypeScript, Python 3.11, UDP Sockets, Win32 SendInput}}{Sep 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Engineered an open-source wireless peripheral ecosystem transforming Android devices into a glass trackpad, 3-mode gamepad (Xbox/PS), and mechanical keyboard for Windows 10/11 PCs.}
+            \resumeItem{Eliminated TCP head-of-line blocking by architecting a custom \textbf{UDP datagram streaming pipeline over Port 5002}, injecting cursor deltas directly into Win32 \texttt{user32.dll} APIs with \textbf{$<$1ms execution latency}.}
+            \resumeItem{Engineered velocity ballistics with 0.1px deadband filtering, eliminating touchscreen digitizer jitter while enabling single-pixel precision and fluid multi-monitor travel.}
+            \resumeItem{Packaged a zero-dependency 27MB standalone Windows system tray daemon via PyInstaller, eliminating the need for unsigned third-party kernel drivers or admin elevation.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Shree Mewa -- Boutique E-Commerce Platform} $|$ \emph{React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6, Web Share API}}{Jan 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Designed and deployed a commercial bespoke gifting platform for a premier dry fruits boutique, serving corporate and wedding gifting clients across Eastern India.}
+            \resumeItem{Eliminated cart abandonment on high-ticket custom hampers (\rupee 25,000+) by engineering an automated WhatsApp concierge checkout funnel dynamically serializing hamper configurations into structured deep-links.}
+            \resumeItem{Built a client-side digital lookbook print engine leveraging dedicated CSS \texttt{@media print} stylesheets and Web Share API, enabling instant generation of offline procurement PDF catalogs.}
+            \resumeItem{Implemented Schema.org \texttt{LocalBusiness} JSON-LD structured data with geo-coordinates and catalog metadata, boosting regional search engine visibility.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Remote Trackpad Web} $|$ \emph{Python, Flask, Socket.IO, JavaScript (ES6+), Web Audio API, Pynput}}{Nov 2024 -- Dec 2024}
+          \resumeItemListStart
+            \resumeItem{Engineered a zero-installation input server allowing mobile browsers on local Wi-Fi to control desktop cursor movement and shortcuts without installing mobile apps.}
+            \resumeItem{Synthesized real-time tactile acoustic feedback using the Web Audio API (1750Hz snap + 220Hz clack), overcoming iOS Safari's system-level vibration blocking.}
+            \resumeItem{Synchronized client-side touch events using \texttt{requestAnimationFrame} batching, reducing WebSocket packet flooding while maintaining smooth 60fps pointer tracking.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS & CERTIFICATIONS-----------
+\section{Achievements \& Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{2nd Position (Runner-up)}{: Udaan 2024 CSI (Computer Society of India) National Project Exhibition} \\
+     \textbf{AWS Academy Graduate -- Cloud Foundations}{: EC2 Compute, S3 Storage, IAM Security, VPC (Credly: \texttt{1mNIxVxM})} \\
+     \textbf{AWS Academy Graduate -- Machine Learning Foundations}{: ML Pipelines, Computer Vision, SageMaker (Credly: \texttt{olUPF91W})} \\
+     \textbf{React.js Essential Training}{: LinkedIn Learning (Component lifecycle, custom hooks, virtual DOM reconciliation)}
+    }}
+ \end{itemize}
+
+\end{document}

@@ -1,0 +1,149 @@
+%-------------------------
+% SDE & Systems Specialized Resume in LaTeX
+% Author : Shubham Agrawal
+% Focus: Low-Latency Systems, Networking, C++/Python/Java, SDE-1
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Shubham Agrawal} \\ \vspace{2pt}
+    \small +91 8825388041 $|$ \href{mailto:shubhamagrawal.code@gmail.com}{\underline{shubhamagrawal.code@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/shubham-agrawal-dev}{\underline{linkedin.com/in/shubham-agrawal-dev}} $|$
+    \href{https://github.com/AgrShubham}{\underline{github.com/AgrShubham}}
+\end{center}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Institute of Engineering and Science, IPS Academy}{Indore, India}
+      {Bachelor of Technology in Computer Science \& Engineering}{Sep 2021 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Core Coursework:} Data Structures \& Algorithms, Operating Systems, Computer Networks \& Protocols, DBMS, OOP.}
+        \resumeItem{\textbf{Honors:} \textbf{2nd Position (Runner-up)} -- Udaan 2024 CSI (Computer Society of India) National Project Exhibition.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, Java, Python, TypeScript, JavaScript, SQL} \\
+     \textbf{Systems \& Networking}{: UDP/TCP Socket Programming, Win32 API (user32.dll), WebSockets (Socket.IO), Network Protocols} \\
+     \textbf{Backend \& Cloud}{: Node.js, Express, Flask, RESTful APIs, AWS (EC2, S3, IAM, VPC), PostgreSQL, MySQL, MongoDB} \\
+     \textbf{Frontend \& Mobile}{: React 19, React Native, Vite, Tailwind CSS, HTML5 Canvas, Web Audio API} \\
+     \textbf{Tools \& Environments}{: Linux / Bash, Git, GitHub, Android Studio, Postman, Chrome DevTools, VS Code}
+    }}
+ \end{itemize}
+
+\section{Featured Systems \& Software Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Remote Trackpad \& Gamepad Pro -- Low-Latency UDP System} $|$ \emph{Python 3.11, UDP Sockets, Win32 API, React Native}}{Sep 2024 -- Present}
+          \resumeItemListStart
+            \resumeItem{Architected a sub-millisecond input ecosystem streaming real-time touch vectors from Android devices to Windows 10/11 hosts.}
+            \resumeItem{Bypassed TCP head-of-line blocking by engineering an asynchronous \textbf{UDP datagram pipeline over Port 5002}, directly invoking Win32 \texttt{SendInput} (\texttt{user32.dll}) with \textbf{$<$1ms execution latency}.}
+            \resumeItem{Implemented an adaptive deadband filter (0.1px) and natural velocity ballistics curve (\texttt{v_smooth = v_raw * (1.0 + min(2.5, v_raw * 0.6))}), mitigating capacitive sensor drift.}
+            \resumeItem{Packaged host daemon as a standalone 27MB system tray executable via PyInstaller, eliminating third-party kernel driver requirements.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Remote Trackpad Web -- Socket.IO Peripheral Server} $|$ \emph{Python, Flask, Socket.IO, Web Audio API, Pynput}}{Nov 2024 -- Dec 2024}
+          \resumeItemListStart
+            \resumeItem{Engineered a cross-platform wireless input server allowing mobile browsers on local Wi-Fi to emulate mouse and keyboard controls with zero installation.}
+            \resumeItem{Overcame iOS Safari's system vibration restrictions by synthesizing real-time mechanical switch acoustics using the \textbf{Web Audio API} (1750Hz snap + 220Hz clack).}
+            \resumeItem{Batched high-frequency touch coordinate deltas with \texttt{requestAnimationFrame}, preventing WebSocket packet flooding and ensuring 60fps tracking.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Shree Mewa -- Commercial E-Commerce Platform} $|$ \emph{React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6, JSON-LD}}{Jan 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Engineered a bespoke luxury gifting platform handling corporate order inquiries with strict TypeScript contracts and zero-bundle bloat.}
+            \resumeItem{Eliminated cart abandonment on high-ticket custom hampers (\rupee 25,000+) through an automated WhatsApp concierge checkout funnel.}
+            \resumeItem{Built a client-side digital lookbook print engine (\texttt{@media print}) and implemented Schema.org \texttt{LocalBusiness} SEO data.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Amnesea}{Remote}
+      {Frontend Web Development Intern}{May 2023 -- July 2023}
+      \resumeItemListStart
+        \resumeItem{Architected 15+ modular React.js components, reducing styling code redundancy across 8+ core customer-facing pages.}
+        \resumeItem{Optimized RESTful data-fetching pipelines and code-split dynamic bundles, reducing page-load latency by \textbf{35\%} (Lighthouse verified).}
+        \resumeItem{Resolved 20+ cross-browser compatibility issues, improving mobile responsiveness and boosting user session retention by \textbf{20\%}.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Achievements \& Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{2nd Position (Runner-up)}{: Udaan 2024 CSI (Computer Society of India) National Project Exhibition} \\
+     \textbf{AWS Academy Graduate -- Cloud Foundations}{: EC2 Compute, S3 Storage, IAM, VPC (Credly: \texttt{1mNIxVxM})} \\
+     \textbf{AWS Academy Graduate -- Machine Learning Foundations}{: ML Pipelines, Vision, SageMaker (Credly: \texttt{olUPF91W})} \\
+     \textbf{React.js Essential Training}{: LinkedIn Learning (Component lifecycle, state management, reconciliation)}
+    }}
+ \end{itemize}
+
+\end{document}
