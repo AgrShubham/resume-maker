@@ -22,18 +22,18 @@ Indore, India | +91 8825388041 | shubhamagrawal.code@gmail.com | linkedin.com/in
 
 ## FEATURED SYSTEMS & SOFTWARE PROJECTS
 
-### Remote Trackpad & Gamepad Pro — Low-Latency UDP System | React Native, Python 3.11, UDP, Win32 API
+### Remote Trackpad & Gamepad Pro — Turn Smartphone into PC Trackpad & Gamepad | React Native, Python 3.11, UDP, Win32 API
 - Architected a sub-millisecond input ecosystem streaming real-time touch vectors from Android devices to Windows 10/11 hosts.
 - Bypassed TCP head-of-line blocking by engineering an asynchronous UDP datagram pipeline over Port 5002, directly invoking Win32 SendInput (user32.dll) with <1ms execution latency.
 - Implemented an adaptive deadband filter (0.1px) and natural velocity ballistics curve (v_smooth = v_raw * (1.0 + min(2.5, v_raw * 0.6))), mitigating capacitive sensor drift.
 - Packaged host daemon as a standalone 27MB system tray executable via PyInstaller, eliminating third-party kernel driver requirements.
 
-### Remote Trackpad Web — Socket.IO Peripheral Server | Python, Flask, Socket.IO, Web Audio API, Pynput
+### Remote Trackpad Web — Turn Smartphone Browser into PC Mouse | Python, Flask, Socket.IO, Web Audio API, Pynput
 - Engineered a cross-platform wireless input server allowing mobile browsers on local Wi-Fi to emulate mouse and keyboard controls with zero installation.
 - Overcame iOS Safari system vibration restrictions by synthesizing real-time mechanical switch acoustics using the Web Audio API (1750Hz snap + 220Hz clack).
 - Batched high-frequency touch coordinate deltas with requestAnimationFrame, preventing WebSocket packet flooding and ensuring 60fps tracking.
 
-### Shree Mewa — Commercial E-Commerce Platform | React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6, JSON-LD
+### Shree Mewa — Commercial Boutique & Gifting E-Commerce Store | React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6, JSON-LD
 - Engineered a bespoke luxury gifting platform handling corporate order inquiries with strict TypeScript contracts and zero bundle bloat.
 - Eliminated cart abandonment on high-ticket custom hampers (₹25,000+) through an automated WhatsApp concierge checkout funnel.
 - Built a client-side digital lookbook print engine (@media print) and implemented Schema.org LocalBusiness SEO data.
@@ -43,9 +43,10 @@ Indore, India | +91 8825388041 | shubhamagrawal.code@gmail.com | linkedin.com/in
 ## WORK EXPERIENCE
 **Amnesea** — Remote
 *Frontend Web Development Intern* | May 2023 – July 2023
-- Architected 15+ modular React.js components, reducing styling code redundancy across 8+ core customer-facing pages.
-- Optimized RESTful data-fetching pipelines and code-split dynamic bundles, reducing page-load latency by 35% (Lighthouse verified).
-- Resolved 20+ cross-browser compatibility issues, improving mobile responsiveness and boosting user session retention by 20%.
+- Developed 15+ modular React and Tailwind CSS components from UI mockups, building responsive web pages across mobile and desktop.
+- Integrated backend RESTful API endpoints, handling asynchronous data fetching, loading states, and client-side error boundaries.
+- Improved initial page-load performance by ~35% (audited via Google Lighthouse) through image asset compression and lazy-loading.
+- Resolved cross-browser layout and CSS bugs; collaborated with senior developers via GitHub PR reviews and agile standups.
 
 ---
 
