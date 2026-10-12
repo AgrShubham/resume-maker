@@ -1,0 +1,167 @@
+%-------------------------
+% Tailored Resume for Heizen (Associate Software Engineer)
+% Candidate: Shubham Agrawal
+% Template: Jake's Resume (ATS 100/100 Compatible)
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Shubham Agrawal} \\ \vspace{2pt}
+    \small +91 8825388041 $|$ \href{mailto:shubhamagrawal.code@gmail.com}{\underline{shubhamagrawal.code@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/shubham-agrawal-dev}{\underline{linkedin.com/in/shubham-agrawal-dev}} $|$
+    \href{https://github.com/AgrShubham}{\underline{github.com/AgrShubham}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Software Development Engineer with hands-on experience engineering low-latency networked systems, full-stack web platforms, and RESTful APIs using Python, TypeScript, React 19, and AWS. Proven track record optimizing page-load performance by 35\% at Amnesea and delivering production software with sub-millisecond execution. Strong foundation in data structures, algorithms, and OOP.}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, TypeScript, JavaScript, SQL, C} \\
+     \textbf{Frontend \& Mobile}{: React 19, Next.js, React Native, Tailwind CSS, Vite, HTML5/CSS3} \\
+     \textbf{Backend \& Systems}{: Node.js, Express, Flask, RESTful APIs, WebSockets, UDP Sockets, Win32 API} \\
+     \textbf{Databases \& Cloud}{: PostgreSQL, MySQL, MongoDB, Supabase, AWS (EC2, S3, IAM)} \\
+     \textbf{Developer Tools}{: Git, GitHub, Linux / Bash, Postman, Android Studio}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Amnesea}{Remote}
+      {Frontend Web Development Intern}{May 2023 -- Jul 2023}
+      \resumeItemListStart
+        \resumeItem{Developed 15+ modular React and Tailwind CSS components from UI mockups, building responsive, accessible web pages across mobile and desktop viewports.}
+        \resumeItem{Integrated backend RESTful API endpoints, handling asynchronous data fetching, loading states, and graceful client-side error boundaries.}
+        \resumeItem{Improved initial page-load performance by ~35\% (audited via Google Lighthouse) through image asset compression, script deferral, and component lazy-loading.}
+        \resumeItem{Resolved cross-browser layout and styling bugs across Chrome, Safari, and Firefox; collaborated with senior developers via GitHub pull request reviews and daily standups.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Featured Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Shree Mewa -- Commercial Boutique \& Gifting E-Commerce Store} $|$ \emph{React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6, Web Share API}}{Sep 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Architected and deployed a production full-stack web platform for a premier luxury boutique, translating complex bespoke packaging workflows into an interactive UI.}
+            \resumeItem{Built an automated state-driven WhatsApp concierge checkout pipeline, dynamically encoding configurations into deep-links (eliminating drop-offs on Rs. 25,000+ orders).}
+            \resumeItem{Optimized end-to-end frontend performance and asset delivery using Vite 6 and Tailwind CSS v4, achieving near-instant initial render (under 0.8s) and 60fps micro-interactions.}
+            \resumeItem{Built a client-side digital lookbook print engine leveraging dedicated CSS \texttt{@media print} stylesheets, enabling instant generation of formatted offline PDF catalogs.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Remote Trackpad \& Gamepad Pro -- Turn Smartphone into PC Trackpad \& Gamepad} $|$ \emph{Python 3.11, React Native, TypeScript, UDP Sockets}}{Sep 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Engineered an open-source networked peripheral ecosystem transforming Android devices into a glass trackpad, 3-mode gamepad (Xbox/PS), and keyboard for Windows PCs.}
+            \resumeItem{Eliminated TCP head-of-line blocking by architecting a custom UDP datagram streaming pipeline over Port 5002 with \textbf{under 1ms execution latency} directly into Win32 APIs.}
+            \resumeItem{Engineered mathematical velocity ballistics with 0.1px deadband filtering, eliminating touchscreen digitizer jitter while enabling single-pixel precision and fluid multi-monitor travel.}
+            \resumeItem{Packaged a zero-dependency 27MB standalone Windows system tray daemon via PyInstaller, eliminating the need for unsigned kernel drivers or admin elevation.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Remote Trackpad Web -- Turn Smartphone Browser into PC Mouse} $|$ \emph{Python, Flask, Socket.IO, JavaScript (ES6+), Web Audio API}}{Nov 2025 -- Sep 2026}
+          \resumeItemListStart
+            \resumeItem{Engineered a zero-installation networked input server enabling mobile browsers on local Wi-Fi to control desktop cursor navigation with real-time WebSocket sync.}
+            \resumeItem{Synthesized real-time tactile acoustic feedback using the \textbf{Web Audio API} (1750Hz snap + 220Hz clack), bypassing iOS Safari native vibration restrictions.}
+            \resumeItem{Synchronized client touch events using requestAnimationFrame batching, cutting WebSocket bandwidth by 40\% while maintaining smooth 60fps tracking without DOM thrashing.}
+            \resumeItem{Implemented multi-touch gesture recognition for 2-finger inertial scrolling, virtual drag-and-drop, and desktop media control shortcuts.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Institute of Engineering and Science, IPS Academy}{Indore, India}
+      {Bachelor of Technology in Computer Science \& Engineering}{Sep 2021 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{\textbf{Coursework:} Data Structures \& Algorithms, Object-Oriented Programming (OOP), DBMS, Operating Systems, Computer Networks}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------HONORS & CERTIFICATIONS-----------
+\section{Honors \& Certifications}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{2nd Position (Runner-up)}{: Udaan 2024 CSI (Computer Society of India) National Project Exhibition} \\
+     \textbf{AWS Academy Graduate -- Cloud Foundations}{: Core Compute (EC2), S3 Storage, IAM Security, VPC Architecture (Credly ID: \texttt{1mNIxVxM})} \\
+     \textbf{AWS Academy Graduate -- Machine Learning Foundations}{: ML Pipelines, Computer Vision, AWS SageMaker (Credly ID: \texttt{olUPF91W})} \\
+     \textbf{React.js Essential Training}{: LinkedIn Learning (Component lifecycle, custom hooks, state architecture, virtual DOM reconciliation)}
+    }}
+ \end{itemize}
+
+\end{document}
