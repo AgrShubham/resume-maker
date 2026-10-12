@@ -54,6 +54,9 @@ When generating or tailoring resumes for Shubham, emphasize his unique competiti
 3. **No Tutorial Clones on Master Resume:**
    - Never feature "Meme Generator" or "Chef Claude" on primary SDE/off-campus resumes. Always prioritize **Remote Trackpad (Native & Web)** and **Shree Mewa**.
 
+4. **Continuous Git Tracking & Commits:**
+   - Proactively commit all modified and added files to GitHub repository `AgrShubham/resume-maker` with structured conventional commit messages whenever changes are completed.
+
 ---
 
 ## 📂 Workspace Structure
