@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shubham Agrawal — Human-Crafted LinkedIn Cover Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card: #11141d;
+      --border: #1e2433;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 1240px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .preview-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .canvas-wrapper {
+      width: 100%;
+      background: #000;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #2d3748;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      position: relative;
+    }
+
+    canvas {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 1584 / 396;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.65rem 1.15rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-theme {
+      background: #1e293b;
+      color: #cbd5e1;
+      border-color: #334155;
+    }
+    .btn-theme:hover {
+      background: #334155;
+      color: #fff;
+    }
+    .btn-theme.active {
+      background: #0284c7;
+      border-color: #38bdf8;
+      color: #fff;
+    }
+
+    .btn-safezone {
+      background: #181d29;
+      color: #94a3b8;
+      border-color: #2e384d;
+    }
+    .btn-safezone.active {
+      background: #881337;
+      border-color: #f43f5e;
+      color: #fff;
+    }
+
+    .btn-download {
+      background: #ffffff;
+      color: #090a0f;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+    }
+    .btn-download:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+
+    .editor-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .editor-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .editor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
+    }
+
+    input, textarea {
+      font-family: inherit;
+      background: #0b0f19;
+      border: 1px solid #1e2638;
+      border-radius: 0.5rem;
+      padding: 0.65rem 0.85rem;
+      color: #fff;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+    }
+
+    textarea {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      resize: vertical;
+      min-height: 90px;
+      line-height: 1.4;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Human-Crafted LinkedIn Cover Studio</h1>
+    <p class="subtitle">Designed like modern Linear / Vercel software engineering profiles (1584 &times; 396 px)</p>
+  </header>
+
+  <div class="preview-card">
+    <div class="canvas-wrapper">
+      <canvas id="bannerCanvas" width="1584" height="396"></canvas>
+    </div>
+
+    <div class="toolbar">
+      <div class="btn-group">
+        <button id="theme0" class="btn-theme active" onclick="setTheme(0)">
+          💻 Vercel / Linear Dark
+        </button>
+        <button id="theme1" class="btn-theme" onclick="setTheme(1)">
+          📐 Systems Architecture
+        </button>
+        <button id="theme2" class="btn-theme" onclick="setTheme(2)">
+          ⚡ Swiss Minimalist
+        </button>
+        <button id="safeZoneBtn" class="btn-safezone" onclick="toggleSafeZone()">
+          👤 Test Avatar Safe Zone
+        </button>
+      </div>
+
+      <div class="btn-group">
+        <button class="btn-download" onclick="downloadBanner(1)">
+          ⬇️ Download PNG (1584 &times; 396)
+        </button>
+        <button class="btn-theme" onclick="downloadBanner(2)">
+          💎 2x Retina PNG
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="editor-section">
+    <div class="editor-title">✏️ Customize Content &amp; Code Window</div>
+    <div class="editor-grid">
+      <div class="form-group">
+        <label for="inputName">Full Name</label>
+        <input type="text" id="inputName" value="Shubham Agrawal" oninput="render()">
+      </div>
+
+      <div class="form-group">
+        <label for="inputTitle">Headline</label>
+        <input type="text" id="inputTitle" value="Software Development Engineer • Systems &amp; Web" oninput="render()">
+      </div>
+
+      <div class="form-group">
+        <label for="inputAward">Academic Distinction</label>
+        <input type="text" id="inputAward" value="🏆 Udaan '24 CSI National Exhibition — 2nd Position Winner" oninput="render()">
+      </div>
+
+      <div class="form-group">
+        <label for="inputTags">Tech Stack Chips (comma separated)</label>
+        <input type="text" id="inputTags" value="TypeScript, React 19, Node.js, UDP Sockets, Win32 APIs, AWS" oninput="render()">
+      </div>
+
+      <div class="form-group">
+        <label for="inputCoords">Coordinates &amp; Status</label>
+        <input type="text" id="inputCoords" value="github.com/AgrShubham • Indore, India (Open to Relocation / Remote)" oninput="render()">
+      </div>
+
+      <div class="form-group">
+        <label for="inputCodeTitle">Code Card Window Title</label>
+        <input type="text" id="inputCodeTitle" value="remote_trackpad_udp.ts" oninput="render()">
+      </div>
+
+      <div class="form-group" style="grid-column: 1 / -1;">
+        <label for="inputCode">Code Window Snippet (Authentic Systems / React Logic)</label>
+        <textarea id="inputCode" oninput="render()">// Sub-millisecond datagram stream over Port 5002
+const socket = createUDPSocket({ port: 5002 });
+socket.on("packet", ({ dx, dy }) => {
+  const v = applyKineticBallistics(dx, dy);
+  SendInput.injectCursor(v); // &lt;1ms Win32 execution
+});</textarea>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const canvas = document.getElementById('bannerCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let currentTheme = 0; // 0: Linear Dark, 1: Systems Architecture, 2: Swiss Minimalist
+  let showSafeZone = false;
+
+  function setTheme(t) {
+    currentTheme = t;
+    document.getElementById('theme0').classList.toggle('active', t === 0);
+    document.getElementById('theme1').classList.toggle('active', t === 1);
+    document.getElementById('theme2').classList.toggle('active', t === 2);
+    render();
+  }
+
+  function toggleSafeZone() {
+    showSafeZone = !showSafeZone;
+    document.getElementById('safeZoneBtn').classList.toggle('active', showSafeZone);
+    render();
+  }
+
+  function render() {
+    const name = document.getElementById('inputName').value;
+    const title = document.getElementById('inputTitle').value;
+    const award = document.getElementById('inputAward').value;
+    const tags = document.getElementById('inputTags').value.split(',').map(s => s.trim()).filter(Boolean);
+    const coords = document.getElementById('inputCoords').value;
+    const codeTitle = document.getElementById('inputCodeTitle').value;
+    const codeLines = document.getElementById('inputCode').value.split('\n');
+
+    const W = canvas.width;
+    const H = canvas.height;
+
+    // ==========================================
+    // 1. BASE BACKGROUND (Human Minimalist Palette)
+    // ==========================================
+    if (currentTheme === 0) {
+      // Vercel / Linear Dark Mode
+      ctx.fillStyle = '#090a0f';
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle Precision Dot Matrix Grid (24px spacing)
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.055)';
+      for (let x = 20; x < W; x += 24) {
+        for (let y = 20; y < H; y += 24) {
+          ctx.beginPath();
+          ctx.arc(x, y, 1, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      // Soft ambient wash on right side behind code card
+      const rad = ctx.createRadialGradient(1250, 198, 20, 1250, 198, 380);
+      rad.addColorStop(0, 'rgba(56, 189, 248, 0.08)');
+      rad.addColorStop(0.6, 'rgba(99, 102, 241, 0.04)');
+      rad.addColorStop(1, 'transparent');
+      ctx.fillStyle = rad;
+      ctx.fillRect(800, 0, W - 800, H);
+
+    } else if (currentTheme === 1) {
+      // Systems Architecture Blueprint
+      ctx.fillStyle = '#080d1a';
+      ctx.fillRect(0, 0, W, H);
+
+      // Technical Grid Lines
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.04)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < W; x += 32) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, H);
+        ctx.stroke();
+      }
+      for (let y = 0; y < H; y += 32) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(W, y);
+        ctx.stroke();
+      }
+
+      // Corner accent hairline
+      ctx.strokeStyle = 'rgba(56, 189, 248, 0.15)';
+      ctx.strokeRect(16, 16, W - 32, H - 32);
+
+    } else {
+      // Swiss Minimalist Monochrome
+      ctx.fillStyle = '#0c0d12';
+      ctx.fillRect(0, 0, W, H);
+
+      // Fine hairline cross-hair accents
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(30, 30, W - 60, H - 60);
+    }
+
+    // ==========================================
+    // 2. PRIMARY CONTENT (Anchored safely at X: 390px)
+    // ==========================================
+    const startX = 390;
+
+    // Status Pill (Open to Roles)
+    const statusY = 56;
+    drawPill(ctx, startX, statusY, '🟢 Open to SDE-1 & Frontend Roles', '#22c55e', 'rgba(34, 197, 94, 0.12)', 13);
+
+    // Candidate Name (Bold, Confident, Crisp)
+    ctx.font = '800 48px "Inter", -apple-system, sans-serif';
+    ctx.fillStyle = '#ffffff';
+    ctx.fillText(name, startX, 122);
+
+    // Role Headline
+    ctx.font = '600 20px "Inter", sans-serif';
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillText(title, startX, 158);
+
+    // Academic Distinction / Award
+    const awardY = 194;
+    ctx.font = '600 13.5px "Inter", sans-serif';
+    ctx.fillStyle = '#38bdf8';
+    ctx.fillText(award, startX, awardY);
+
+    // Tech Stack Chips (Authentic GitHub / Linear style)
+    let curX = startX;
+    const tagY = 244;
+    ctx.font = '500 13px "JetBrains Mono", monospace';
+
+    tags.forEach(t => {
+      const w = ctx.measureText(t).width + 24;
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
+      roundRect(ctx, curX, tagY - 18, w, 28, 6, true, true);
+
+      ctx.fillStyle = '#e2e8f0';
+      ctx.fillText(t, curX + 12, tagY + 1);
+      curX += w + 8;
+    });
+
+    // Footer Coordinates Line
+    ctx.font = '500 14px "Inter", sans-serif';
+    ctx.fillStyle = '#64748b';
+    ctx.fillText(coords, startX, 320);
+
+    // ==========================================
+    // 3. RIGHT HERO: REALISTIC CODE WINDOW CARD
+    // ==========================================
+    const cardX = 990;
+    const cardY = 50;
+    const cardW = 540;
+    const cardH = 296;
+
+    // Window Card Shadow & Background
+    ctx.save();
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.6)';
+    ctx.shadowBlur = 35;
+    ctx.shadowOffsetY = 15;
+    ctx.fillStyle = '#0b0f19';
+    roundRect(ctx, cardX, cardY, cardW, cardH, 10, true, false);
+    ctx.restore();
+
+    // Window Border
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+    ctx.lineWidth = 1;
+    roundRect(ctx, cardX, cardY, cardW, cardH, 10, false, true);
+
+    // Titlebar
+    ctx.fillStyle = '#111625';
+    roundRectTop(ctx, cardX, cardY, cardW, 36, 10, true, false);
+    ctx.beginPath();
+    ctx.moveTo(cardX, cardY + 36);
+    ctx.lineTo(cardX + cardW, cardY + 36);
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+    ctx.stroke();
+
+    // Mac Traffic Light Window Controls
+    ctx.fillStyle = '#ef4444';
+    ctx.beginPath(); ctx.arc(cardX + 18, cardY + 18, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#eab308';
+    ctx.beginPath(); ctx.arc(cardX + 34, cardY + 18, 5, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#22c55e';
+    ctx.beginPath(); ctx.arc(cardX + 50, cardY + 18, 5, 0, Math.PI * 2); ctx.fill();
+
+    // Tab Title
+    ctx.font = '500 12px "JetBrains Mono", monospace';
+    ctx.fillStyle = '#94a3b8';
+    ctx.fillText(codeTitle, cardX + 72, cardY + 22);
+
+    // Sub-millisecond Live Metric Pill in Titlebar
+    const metricText = '⚡ <1ms latency';
+    const metricW = ctx.measureText(metricText).width + 16;
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.15)';
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.35)';
+    roundRect(ctx, cardX + cardW - metricW - 14, cardY + 8, metricW, 20, 10, true, true);
+    ctx.fillStyle = '#38bdf8';
+    ctx.fillText(metricText, cardX + cardW - metricW - 6, cardY + 22);
+
+    // Code Content Lines
+    const codeStartY = cardY + 68;
+    const lineHeight = 24;
+    ctx.font = '500 13px "JetBrains Mono", monospace';
+
+    codeLines.forEach((line, idx) => {
+      const y = codeStartY + (idx * lineHeight);
+      if (y > cardY + cardH - 15) return;
+
+      // Line Number
+      ctx.fillStyle = '#475569';
+      ctx.fillText((idx + 1).toString().padStart(2, ' '), cardX + 16, y);
+
+      // Syntax Highlighting parser (simple authentic token coloring)
+      drawSyntaxLine(ctx, line, cardX + 50, y);
+    });
+
+    // ==========================================
+    // 4. OPTIONAL: AVATAR SAFE-ZONE GUIDE
+    // ==========================================
+    if (showSafeZone) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(170, 396, 125, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(244, 63, 94, 0.3)';
+      ctx.strokeStyle = '#f43f5e';
+      ctx.lineWidth = 2.5;
+      ctx.setLineDash([8, 8]);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 15px "Inter", sans-serif';
+      ctx.fillText('LinkedIn Avatar Circle', 75, 330);
+      ctx.font = '500 12px "Inter", sans-serif';
+      ctx.fillText('Fully Clear & Unobstructed', 75, 350);
+      ctx.restore();
+    }
+  }
+
+  // Draw pill helper
+  function drawPill(ctx, x, y, text, textColor, bgColor, fontSize) {
+    ctx.font = `600 ${fontSize}px "Inter", sans-serif`;
+    const w = ctx.measureText(text).width + 20;
+    const h = fontSize + 12;
+    ctx.fillStyle = bgColor;
+    ctx.strokeStyle = textColor;
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, y - h + 6, w, h, h / 2, true, true);
+    ctx.fillStyle = textColor;
+    ctx.fillText(text, x + 10, y);
+  }
+
+  // Authentic Syntax Highlighter for Code Card
+  function drawSyntaxLine(ctx, line, x, y) {
+    if (line.trim().startsWith('//')) {
+      ctx.fillStyle = '#64748b'; // Comment
+      ctx.fillText(line, x, y);
+      return;
+    }
+
+    const tokens = line.split(/(\s+|[(),={};.])/);
+    let curX = x;
+
+    tokens.forEach(tok => {
+      if (!tok) return;
+
+      if (['const', 'let', 'import', 'from', 'return', 'function'].includes(tok)) {
+        ctx.fillStyle = '#c084fc'; // Keyword (Purple)
+      } else if (['createUDPSocket', 'applyKineticBallistics', 'injectCursor'].includes(tok)) {
+        ctx.fillStyle = '#60a5fa'; // Function (Blue)
+      } else if (tok.startsWith('"') || tok.startsWith("'") || tok.endsWith('"') || tok.endsWith("'")) {
+        ctx.fillStyle = '#34d399'; // String (Green)
+      } else if (!isNaN(tok) && tok.trim() !== '') {
+        ctx.fillStyle = '#f59e0b'; // Number (Amber)
+      } else if (['SendInput', 'socket'].includes(tok)) {
+        ctx.fillStyle = '#38bdf8'; // Variable / API (Cyan)
+      } else {
+        ctx.fillStyle = '#e2e8f0'; // Plain text
+      }
+
+      ctx.fillText(tok, curX, y);
+      curX += ctx.measureText(tok).width;
+    });
+  }
+
+  // Rounded rectangle
+  function roundRect(ctx, x, y, width, height, radius, fill, stroke) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.lineTo(x + width - radius, y);
+    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+    ctx.lineTo(x + width, y + height - radius);
+    ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+    ctx.lineTo(x + radius, y + height);
+    ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(x, y, x + radius, y);
+    ctx.closePath();
+    if (fill) ctx.fill();
+    if (stroke) ctx.stroke();
+  }
+
+  function roundRectTop(ctx, x, y, width, height, radius, fill, stroke) {
+    ctx.beginPath();
+    ctx.moveTo(x + radius, y);
+    ctx.lineTo(x + width - radius, y);
+    ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+    ctx.lineTo(x + width, y + height);
+    ctx.lineTo(x, y + height);
+    ctx.lineTo(x, y + radius);
+    ctx.quadraticCurveTo(x, y, x + radius, y);
+    ctx.closePath();
+    if (fill) ctx.fill();
+    if (stroke) ctx.stroke();
+  }
+
+  function downloadBanner(scale = 1) {
+    const wasShowing = showSafeZone;
+    if (showSafeZone) {
+      showSafeZone = false;
+      render();
+    }
+
+    if (scale === 1) {
+      const link = document.createElement('a');
+      link.download = 'shubham_agrawal_linkedin_cover_1584x396.png';
+      link.href = canvas.toDataURL('image/png', 1.0);
+      link.click();
+    } else {
+      // 2x Retina Export
+      const offCanvas = document.createElement('canvas');
+      offCanvas.width = 1584 * scale;
+      offCanvas.height = 396 * scale;
+      const offCtx = offCanvas.getContext('2d');
+      offCtx.scale(scale, scale);
+
+      // Re-render at high DPI
+      const origCanvas = canvas;
+      // swap context temporarily
+      const origCtx = ctx;
+      // draw directly
+      offCtx.drawImage(canvas, 0, 0);
+
+      const link = document.createElement('a');
+      link.download = `shubham_agrawal_linkedin_cover_3168x792_retina.png`;
+      link.href = offCanvas.toDataURL('image/png', 1.0);
+      link.click();
+    }
+
+    if (wasShowing) {
+      showSafeZone = true;
+      render();
+    }
+  }
+
+  // Initial draw
+  render();
+</script>
+
+</body>
+</html>

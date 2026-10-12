@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <!-- Background Dot Pattern -->
+    <pattern id="dotGrid" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity="0.06" />
+    </pattern>
+
+    <!-- Subtle Ambient Radial Glow on the Right -->
+    <radialGradient id="subtleGlow" cx="80%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08" />
+      <stop offset="60%" stop-color="#818cf8" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#090a0f" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Window Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+  </style>
+
+  <!-- 1. Deep Matte Dark Background -->
+  <rect width="1584" height="396" fill="#090a0f" />
+  <rect width="1584" height="396" fill="url(#subtleGlow)" />
+  <rect width="1584" height="396" fill="url(#dotGrid)" />
+
+  <!-- 2. Primary Information Block (Safe Zone X >= 390px) -->
+
+  <!-- Availability Pill -->
+  <g transform="translate(390, 44)">
+    <rect width="250" height="26" rx="13" fill="#22c55e" fill-opacity="0.1" stroke="#22c55e" stroke-width="1" stroke-opacity="0.4" />
+    <text x="12" y="17" class="font-sans" font-size="12" font-weight="600" fill="#4ade80">
+      🟢 Open to SDE-1 &amp; Frontend Roles
+    </text>
+  </g>
+
+  <!-- Full Name -->
+  <text x="390" y="122" class="font-sans" font-size="48" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+    Shubham Agrawal
+  </text>
+
+  <!-- Role Headline -->
+  <text x="390" y="158" class="font-sans" font-size="20" font-weight="600" fill="#94a3b8">
+    Software Development Engineer • Systems &amp; Web
+  </text>
+
+  <!-- Award Line -->
+  <text x="390" y="196" class="font-sans" font-size="13.5" font-weight="600" fill="#38bdf8">
+    🏆 Udaan '24 CSI National Exhibition — 2nd Position Winner
+  </text>
+
+  <!-- Tech Stack Chips -->
+  <g transform="translate(390, 226)">
+    <!-- Chip 1: TypeScript -->
+    <g transform="translate(0, 0)">
+      <rect width="102" height="28" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <text x="12" y="19" class="font-mono" font-size="12.5" font-weight="500" fill="#e2e8f0">TypeScript</text>
+    </g>
+
+    <!-- Chip 2: React 19 -->
+    <g transform="translate(110, 0)">
+      <rect width="84" height="28" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <text x="12" y="19" class="font-mono" font-size="12.5" font-weight="500" fill="#e2e8f0">React 19</text>
+    </g>
+
+    <!-- Chip 3: Node.js -->
+    <g transform="translate(202, 0)">
+      <rect width="80" height="28" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <text x="12" y="19" class="font-mono" font-size="12.5" font-weight="500" fill="#e2e8f0">Node.js</text>
+    </g>
+
+    <!-- Chip 4: UDP Sockets -->
+    <g transform="translate(290, 0)">
+      <rect width="112" height="28" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <text x="12" y="19" class="font-mono" font-size="12.5" font-weight="500" fill="#e2e8f0">UDP Sockets</text>
+    </g>
+
+    <!-- Chip 5: Win32 APIs -->
+    <g transform="translate(410, 0)">
+      <rect width="100" height="28" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <text x="12" y="19" class="font-mono" font-size="12.5" font-weight="500" fill="#e2e8f0">Win32 APIs</text>
+    </g>
+
+    <!-- Chip 6: AWS -->
+    <g transform="translate(518, 0)">
+      <rect width="56" height="28" rx="6" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <text x="12" y="19" class="font-mono" font-size="12.5" font-weight="500" fill="#e2e8f0">AWS</text>
+    </g>
+  </g>
+
+  <!-- Coordinates / Footer -->
+  <text x="390" y="322" class="font-sans" font-size="14" font-weight="500" fill="#64748b">
+    github.com/AgrShubham  •  Indore, India (Open to Relocation / Remote)
+  </text>
+
+  <!-- 3. Hero Element on Right: Authentic macOS / VS Code Floating Card -->
+  <g transform="translate(990, 50)" filter="url(#cardShadow)">
+    <!-- Window Base -->
+    <rect width="540" height="296" rx="10" fill="#0b0f19" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+
+    <!-- Titlebar -->
+    <path d="M0,10 Q0,0 10,0 L530,0 Q540,0 540,10 L540,36 L0,36 Z" fill="#111625" />
+    <line x1="0" y1="36" x2="540" y2="36" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" />
+
+    <!-- Traffic Lights -->
+    <circle cx="18" cy="18" r="5" fill="#ef4444" />
+    <circle cx="34" cy="18" r="5" fill="#eab308" />
+    <circle cx="50" cy="18" r="5" fill="#22c55e" />
+
+    <!-- Filename Tab -->
+    <text x="72" y="22" class="font-mono" font-size="12" font-weight="500" fill="#94a3b8">
+      remote_trackpad_udp.ts
+    </text>
+
+    <!-- Metric Pill in Titlebar -->
+    <g transform="translate(408, 8)">
+      <rect width="118" height="20" rx="10" fill="#0284c7" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.35" />
+      <text x="10" y="14" class="font-mono" font-size="11" font-weight="600" fill="#38bdf8">
+        ⚡ &lt;1ms latency
+      </text>
+    </g>
+
+    <!-- Code Editor Content -->
+    <!-- Line 1: Comment -->
+    <text x="18" y="72" class="font-mono" font-size="12.5" fill="#475569">01</text>
+    <text x="48" y="72" class="font-mono" font-size="12.5" fill="#64748b">// Sub-millisecond datagram stream over Port 5002</text>
+
+    <!-- Line 2: Import / Socket -->
+    <text x="18" y="98" class="font-mono" font-size="12.5" fill="#475569">02</text>
+    <text x="48" y="98" class="font-mono" font-size="12.5" fill="#c084fc">const </text>
+    <text x="92" y="98" class="font-mono" font-size="12.5" fill="#38bdf8">socket </text>
+    <text x="146" y="98" class="font-mono" font-size="12.5" fill="#ffffff">= </text>
+    <text x="162" y="98" class="font-mono" font-size="12.5" fill="#60a5fa">createUDPSocket</text>
+    <text x="290" y="98" class="font-mono" font-size="12.5" fill="#ffffff">({ </text>
+    <text x="310" y="98" class="font-mono" font-size="12.5" fill="#e2e8f0">port: </text>
+    <text x="355" y="98" class="font-mono" font-size="12.5" fill="#f59e0b">5002</text>
+    <text x="390" y="98" class="font-mono" font-size="12.5" fill="#ffffff"> });</text>
+
+    <!-- Line 3: Event Handler -->
+    <text x="18" y="124" class="font-mono" font-size="12.5" fill="#475569">03</text>
+    <text x="48" y="124" class="font-mono" font-size="12.5" fill="#38bdf8">socket</text>
+    <text x="98" y="124" class="font-mono" font-size="12.5" fill="#ffffff">.</text>
+    <text x="106" y="124" class="font-mono" font-size="12.5" fill="#60a5fa">on</text>
+    <text x="122" y="124" class="font-mono" font-size="12.5" fill="#ffffff">(</text>
+    <text x="130" y="124" class="font-mono" font-size="12.5" fill="#34d399">"packet"</text>
+    <text x="195" y="124" class="font-mono" font-size="12.5" fill="#ffffff">, ({ </text>
+    <text x="232" y="124" class="font-mono" font-size="12.5" fill="#e2e8f0">dx, dy</text>
+    <text x="285" y="124" class="font-mono" font-size="12.5" fill="#ffffff"> }) =&gt; {</text>
+
+    <!-- Line 4: Ballistics Math -->
+    <text x="18" y="150" class="font-mono" font-size="12.5" fill="#475569">04</text>
+    <text x="48" y="150" class="font-mono" font-size="12.5" fill="#c084fc">  const </text>
+    <text x="108" y="150" class="font-mono" font-size="12.5" fill="#e2e8f0">v = </text>
+    <text x="138" y="150" class="font-mono" font-size="12.5" fill="#60a5fa">applyKineticBallistics</text>
+    <text x="315" y="150" class="font-mono" font-size="12.5" fill="#ffffff">(dx, dy);</text>
+
+    <!-- Line 5: SendInput Injection -->
+    <text x="18" y="176" class="font-mono" font-size="12.5" fill="#475569">05</text>
+    <text x="48" y="176" class="font-mono" font-size="12.5" fill="#38bdf8">  SendInput</text>
+    <text x="130" y="176" class="font-mono" font-size="12.5" fill="#ffffff">.</text>
+    <text x="138" y="176" class="font-mono" font-size="12.5" fill="#60a5fa">injectCursor</text>
+    <text x="240" y="176" class="font-mono" font-size="12.5" fill="#ffffff">(v); </text>
+    <text x="278" y="176" class="font-mono" font-size="12.5" fill="#64748b">// Win32 User32.dll</text>
+
+    <!-- Line 6: Closing bracket -->
+    <text x="18" y="202" class="font-mono" font-size="12.5" fill="#475569">06</text>
+    <text x="48" y="202" class="font-mono" font-size="12.5" fill="#ffffff">});</text>
+
+    <!-- Benchmark status footer inside code window -->
+    <g transform="translate(18, 240)">
+      <rect width="504" height="36" rx="6" fill="#111625" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" />
+      <text x="16" y="23" class="font-mono" font-size="11.5" fill="#94a3b8">
+        Pipeline: <tspan fill="#34d399">ACTIVE</tspan> • Wi-Fi 5GHz UDP • Win32 user32.dll [0.8ms]
+      </text>
+    </g>
+  </g>
+</svg>
