@@ -12,7 +12,7 @@ This dedicated Antigravity workspace manages, generates, tailors, and optimizes 
 - **Location:** Indore, India (Open to Relocation / Remote)
 - **LinkedIn:** https://linkedin.com/in/shubham-agrawal-dev
 - **GitHub:** https://github.com/AgrShubham
-- **Portfolio:** https://github.com/AgrShubham (Deployed on Vercel)
+- **Portfolio:** https://shubham-agrawal-portfolio.vercel.app/
 - **Education:** Bachelor of Technology in Computer Science & Engineering, Institute of Engineering and Science, IPS Academy, Indore (Sep 2021 – May 2025)
 - **Key Academic Honor:** 🏆 **2nd Position (Runner-up) — Udaan 2024 CSI (Computer Society of India)** National Project Exhibition
 

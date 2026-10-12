@@ -3,10 +3,10 @@
 **Software Development Engineer (SDE)**  
 *Low-Latency Systems • Networked Peripherals • Full-Stack Web Development*
 
-Indore, India • [shubhamagrawal.code@gmail.com](mailto:shubhamagrawal.code@gmail.com) • [+91 8825388041](tel:+918825388041)
+India • [shubham-agrawal-portfolio.vercel.app](https://shubham-agrawal-portfolio.vercel.app/) • [shubhamagrawal.code@gmail.com](mailto:shubhamagrawal.code@gmail.com) • [+91 8825388041](tel:+918825388041)
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-shubham--agrawal-000000?style=flat-square&logo=vercel&logoColor=white)](https://shubham-agrawal-portfolio.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-shubham--agrawal--dev-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/shubham-agrawal-dev)
-[![Resume Hub](https://img.shields.io/badge/Resume%20Hub-AgrShubham%2Fresume--maker-181717?style=flat-square&logo=github)](https://github.com/AgrShubham/resume-maker)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AgrShubham-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/AgrShubham)
 [![Email](https://img.shields.io/badge/Email-shubhamagrawal.code%40gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:shubhamagrawal.code@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-AgrShubham-181717?style=flat-square&logo=github)](https://github.com/AgrShubham)
@@ -89,6 +89,7 @@ Software Development Engineer with experience engineering low-latency networked 
 
 ## Contact & Profiles
 
+- **Portfolio:** [shubham-agrawal-portfolio.vercel.app](https://shubham-agrawal-portfolio.vercel.app/)
 - **Email:** [shubhamagrawal.code@gmail.com](mailto:shubhamagrawal.code@gmail.com)
 - **LinkedIn:** [linkedin.com/in/shubham-agrawal-dev](https://linkedin.com/in/shubham-agrawal-dev)
 - **GitHub:** [github.com/AgrShubham](https://github.com/AgrShubham)
