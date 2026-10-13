@@ -4,7 +4,7 @@
 % Template: Jake's Resume (ATS 100/100 Compatible)
 %-------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10.5pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -38,8 +38,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -53,20 +53,20 @@
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -81,15 +81,23 @@
     \href{https://github.com/AgrShubham}{\underline{github.com/AgrShubham}}
 \end{center}
 
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Junior Frontend Developer with hands-on production experience building responsive web applications using ReactJS (React 19), TypeScript, and Tailwind CSS. Proven track record at Amnesea developing 15+ modular UI components from design mockups, integrating backend RESTful APIs, and cutting page-load times by 35\%. Passionate about writing clean, reusable code, cross-browser debugging, and delivering modern, scalable web interfaces.
+    }}
+\end{itemize}
+
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: TypeScript, JavaScript (ES6+), Python, Java, SQL, C} \\
-     \textbf{Frontend \& Mobile}{: React.js (React 19), Next.js, React Native, Tailwind CSS (v4), Vite, HTML5 Canvas, Web Audio API} \\
-     \textbf{React Architecture}{: Component Architecture, Custom Hooks, State Management, Props \& Context API, Virtual DOM, Error Boundaries} \\
-     \textbf{Backend \& Networking}{: Node.js, Express, RESTful APIs, WebSockets (Socket.IO), UDP Sockets, Flask, Postman} \\
-     \textbf{Developer Tools \& Testing}{: Git, GitHub, Chrome DevTools, Google Lighthouse, Android Studio, VS Code, Linux}
+     \textbf{Languages}{: JavaScript, TypeScript, Python, Java, SQL, HTML5, CSS3} \\
+     \textbf{Frontend \& UI}{: ReactJS (React 19), Next.js, Tailwind CSS, Vite, Redux, React Native} \\
+     \textbf{Core React Competencies}{: Reusable Components, React Hooks, State Management, Responsive Design, Cross-Browser Compatibility} \\
+     \textbf{Backend \& Integration}{: RESTful APIs, Node.js, Express, WebSockets, JSON, Postman} \\
+     \textbf{Version Control \& Tools}{: Git, GitHub, Chrome DevTools, Linux / Bash, Vercel}
     }}
  \end{itemize}
 
@@ -100,8 +108,8 @@
       {Amnesea}{Remote}
       {Frontend Web Development Intern}{May 2023 -- Jul 2023}
       \resumeItemListStart
-        \resumeItem{Developed 15+ modular React and Tailwind CSS components from UI mockups, building responsive, accessible web pages across mobile and desktop viewports.}
-        \resumeItem{Integrated backend RESTful API endpoints, handling asynchronous data fetching, loading states, and graceful client-side error boundaries.}
+        \resumeItem{Developed 15+ modular, reusable React and Tailwind CSS components from UI/UX mockups, ensuring full mobile and desktop responsiveness.}
+        \resumeItem{Integrated backend RESTful API endpoints, handling asynchronous data fetching, state updates, loading indicators, and graceful error boundaries.}
         \resumeItem{Improved initial page-load performance by ~35\% (audited via Google Lighthouse) through image asset compression, script deferral, and component lazy-loading.}
         \resumeItem{Resolved cross-browser layout and styling bugs across Chrome, Safari, and Firefox; collaborated with senior developers via GitHub pull request reviews and daily standups.}
       \resumeItemListEnd
@@ -113,11 +121,10 @@
       \resumeProjectHeading
           {\textbf{Shree Mewa -- Commercial Boutique \& Gifting E-Commerce Store} $|$ \emph{React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6}}{Sep 2026 -- Present}
           \resumeItemListStart
-            \resumeItem{Architected and deployed a commercial web application for a premier luxury gifting boutique, translating complex bespoke packaging workflows into an interactive UI.}
-            \resumeItem{Built a custom React state-driven hamper builder with real-time price calculation, dynamic box finish selection, and laser monogram preview.}
+            \resumeItem{Architected and deployed a production full-stack web platform for a luxury retail boutique, converting design mockups into a responsive, accessible interface.}
+            \resumeItem{Built a custom React state-driven hamper customization builder with real-time pricing calculation, dynamic box finish selection, and live personalization preview.}
             \resumeItem{Eliminated cart abandonment on custom hampers (Rs. 25,000+) by engineering an automated WhatsApp concierge checkout funnel encoding configurations into deep-links.}
             \resumeItem{Optimized frontend asset delivery with Vite 6 and Tailwind CSS v4, achieving near-instant initial render (under 0.8s) and smooth 60fps micro-interactions.}
-            \resumeItem{Built a client-side digital lookbook print engine using custom CSS \texttt{@media print} stylesheets, enabling instant generation of formatted offline PDF catalogs.}
           \resumeItemListEnd
 
       \resumeProjectHeading
@@ -126,11 +133,11 @@
             \resumeItem{Engineered a cross-platform mobile application using \textbf{React Native} turning Android devices into a customizable trackpad, 3-mode gamepad (Xbox/PS), and keyboard.}
             \resumeItem{Eliminated TCP head-of-line blocking by architecting a custom UDP datagram streaming pipeline over Port 5002 with \textbf{$<$1ms execution latency} into Win32 APIs.}
             \resumeItem{Engineered mathematical velocity ballistics with 0.1px deadband filtering, eliminating touchscreen digitizer jitter while enabling single-pixel precision.}
-            \resumeItem{Architected configurable UI layouts with real-time deadband tuning (5\%--30\%), sensitivity controls (0.5x--2.5x), and haptic modulation.}
+            \resumeItem{Built configurable UI layouts with real-time deadband tuning (5\%--30\%), sensitivity controls (0.5x--2.5x), and tactile haptic vibration modulation.}
           \resumeItemListEnd
 
       \resumeProjectHeading
-          {\textbf{Remote Trackpad Web -- Turn Smartphone Browser into PC Mouse} $|$ \emph{JavaScript (ES6+), Web Audio API, WebSockets, Flask}}{Nov 2025 -- Sep 2026}
+          {\textbf{Remote Trackpad Web -- Turn Smartphone Browser into PC Mouse} $|$ \emph{JavaScript, Web Audio API, WebSockets, Socket.IO, Flask, HTML5/CSS3}}{Nov 2025 -- Sep 2026}
           \resumeItemListStart
             \resumeItem{Engineered a zero-installation mobile web application enabling smartphone browsers on local Wi-Fi to control desktop cursor navigation with real-time WebSocket sync.}
             \resumeItem{Synthesized real-time tactile acoustic feedback using the \textbf{Web Audio API} (1750Hz snap + 220Hz clack), bypassing iOS Safari native vibration restrictions.}
@@ -156,8 +163,8 @@
     \small{\item{
      \textbf{2nd Position (Runner-up)}{: Udaan 2024 CSI (Computer Society of India) National Project Exhibition} \\
      \textbf{React.js Essential Training}{: LinkedIn Learning (Component lifecycle, custom hooks, state architecture, virtual DOM reconciliation)} \\
-     \textbf{AWS Academy Graduate -- Cloud Foundations}{: EC2 Compute, S3 Storage, IAM Security, VPC Architecture (Credly ID: \texttt{1mNIxVxM})} \\
-     \textbf{AWS Academy Graduate -- Machine Learning Foundations}{: Machine Learning Pipelines, Computer Vision, AWS SageMaker (Credly ID: \texttt{olUPF91W})}
+     \textbf{AWS Academy Graduate -- Cloud Foundations}{: Core Compute (EC2), S3 Storage, IAM Security, VPC Architecture (Credly ID: \texttt{1mNIxVxM})} \\
+     \textbf{AWS Academy Graduate -- Machine Learning Foundations}{: ML Pipelines, Computer Vision, AWS SageMaker (Credly ID: \texttt{olUPF91W})}
     }}
  \end{itemize}
 

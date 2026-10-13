@@ -1,3 +1,4 @@
+
 # 📜 Complete Project Chat History & Engineering Decision Log
 
 **Workspace:** Shubham Agrawal Resume & Developer Profile Workspace (`Shubham-Resume`)  
@@ -41,6 +42,7 @@
 25. [Turn 25: Replacing Outdated Portfolio Scroll GIF with Real-Time Typing Hero & Systems Flowchart](#turn-25-replacing-outdated-portfolio-scroll-gif-with-real-time-typing-hero-systems-flowchart)
 26. [Turn 26: Multi-Repository GitHub Synchronization & Git State Verification](#turn-26-multi-repository-github-synchronization-git-state-verification)
 27. [Turn 27: Project Chat History Extraction & Comprehensive Documentation Archive](#turn-27-project-chat-history-extraction-comprehensive-documentation-archive)
+28. [Turn 28: Tailoring Kalkani Resume for Jr. ReactJS Developer (Heizen Principles Alignment)](#turn-28-tailoring-kalkani-resume-for-jr-reactjs-developer-heizen-principles-alignment)
 
 ---
 
@@ -101,27 +103,46 @@ Whenever you're ready, paste the JD or company details below!
 ```text
 Kalkani Systems Pvt. ltd.
 
-Jr. ReactJS Developer
+Jr. ReactJS Developer
+
 Onsite - Full Time 
 
-Job Details
-
-We are looking for a passionate and enthusiastic Junior ReactJS Developer to join our development team at Kalkani Systems Pvt. Ltd., Surat. This role is ideal for freshers or candidates with up to 1 year of experience who want to build their career in modern frontend development. You will work on real-world web applications and collaborate with our experienced team to develop scalable and high-quality user interfaces.
-Responsibilities
-
-    Develop and maintain web applications using ReactJS.
-    Convert UI/UX designs into responsive and functional web interfaces.
-    Write clean, efficient, and reusable code.
-    Work closely with backend developers and designers to implement features.
-    Debug and resolve frontend issues and performance bottlenecks.
-    Ensure cross-browser and cross-device compatibility.
-    Optimize applications for maximum speed and scalability.
-    Participate in team meetings, code reviews, and learning sessions.
-    Stay updated with the latest frontend and ReactJS trends.
-
-Required Skills
-
-    Basic understanding of JavaScript, HTML, and CSS.
+Job Details
+
+
+
+We are looking for a passionate and enthusiastic Junior ReactJS Developer to join our development team at Kalkani Systems Pvt. Ltd., Surat. This role is ideal for freshers or candidates with up to 1 year of experience who want to build their career in modern frontend development. You will work on real-world web applications and collaborate with our experienced team to develop scalable and high-quality user interfaces.
+
+Responsibilities
+
+
+
+    Develop and maintain web applications using ReactJS.
+
+    Convert UI/UX designs into responsive and functional web interfaces.
+
+    Write clean, efficient, and reusable code.
+
+    Work closely with backend developers and designers to implement features.
+
+    Debug and resolve frontend issues and performance bottlenecks.
+
+    Ensure cross-browser and cross-device compatibility.
+
+    Optimize applications for maximum speed and scalability.
+
+    Participate in team meetings, code reviews, and learning sessions.
+
+    Stay updated with the latest frontend and ReactJS trends.
+
+
+
+Required Skills
+
+
+
+    Basic understanding of JavaScript, HTML, and CSS.
+
     Knowledge
 ... [truncated for readability]
 ```
@@ -1239,7 +1260,8 @@ Could u make a kind of project preview inside readme
 
 #### 👤 User Request
 ```text
-engineer the readme to make it look more visual insted of being text heavy.
+engineer the readme to make it look more visual insted of being text heavy.
+
 Could u make a kind of project preview inside readme
 ```
 
@@ -1360,6 +1382,35 @@ fetch chat history of this project and store it in a file and update to github
 
 #### 💡 Engineering Decisions & Deliverables
 *Operations executed and state updated in repository.* 
+
+---
+
+### <a id="turn-28-tailoring-kalkani-resume-for-jr-reactjs-developer-heizen-principles-alignment"></a>Turn 28: Tailoring Kalkani Resume for Jr. ReactJS Developer (Heizen Principles Alignment)
+
+**Timestamp:** `2026-10-14T01:28:30+05:30`  
+**Step Index:** `Step 725`
+
+#### 👤 User Request
+```text
+update the kalkani resume for this (tailored according to this) jd and follow the heizen resume formating principles
+[Attached Image: Kalkani Systems Pvt. Ltd. — Jr. ReactJS Developer Job Description]
+```
+
+#### 🛠️ Key Tool Operations & Artifacts
+- **Files Modified / Referenced:** `variants/resume_kalkani_reactjs.typ`, `variants/resume_kalkani_reactjs.tex`, `variants/resume_kalkani_reactjs.md`, `variants/resume_heizen_ase.typ`
+- **Operations Executed:**
+  - Audited Kalkani Systems Jr. ReactJS Developer JD (responsibilities: converting UI/UX mockups, reusable code, cross-browser compatibility, REST APIs, Git, Next.js, modern ES6+).
+  - Adopted exact Heizen formatting parameters: Lato font, `author-font-size: 17.5pt`, `font-size: 8.5pt`, leading `0.48em`, spacing `4.2pt`, full justification, and strict 1-page fit.
+  - Authored tailored 3-line frontend summary at top matching Jr. ReactJS developer profile.
+  - Streamlined technical skills section, highlighting ReactJS (React 19), Next.js, Tailwind CSS, Vite, Redux, RESTful APIs, and cross-browser debugging.
+  - Synchronized Typst, LaTeX, and Markdown formats.
+
+#### 💡 Engineering Decisions & Deliverables
+##### Summary of Changes
+1. **Summary Section:** Added concise professional summary highlighting ReactJS production experience, modular UI component engineering, and RESTful API integration.
+2. **Technical Skills:** Cleaned up ad-hoc tools, organized into Languages, Frontend & UI, Core React Competencies, Backend & Integration, and Version Control.
+3. **Experience & Projects:** Synchronized 4-bullet structure for Amnesea, Shree Mewa, Remote Trackpad Pro, and Remote Trackpad Web, fully aligned with JD keywords.
+4. **Single-Page Constraint:** Calibrated spacing and leading to ensure zero overflow onto page 2.
 
 ---
 
