@@ -1474,7 +1474,7 @@ ok
    - Added **KioskDrop Enterprise** (`kioskdrop-enterprise` + `kioskdrop-mobile` + Vercel demo + `v1.0.0` APK + `39 Vitest` & `24 Jest` tests) as Project #1.
    - Added **MiniLedger** side-by-side with **Remote Trackpad Web** in a 50/50 2-column showcase.
    - Kept tutorial clones (`Chef-Claude`, `MemeGenerator`), take-home assignments, and achievement automation utilities off the flagship profile.
-4. **Factual Hygiene:** Corrected location header to `Indore, India • B.Tech CSE '25`, and omitted unverified `"AWS Academy Cloud Developing"` pending a Credly link. *(Note: Local network dropped with TCP `Connection timed out` on GitHub port 443 when pushing `AgrShubham/AgrShubham`, leaving live push queued for retry once online.)*
+4. **Factual Hygiene & Live Deployment:** Corrected location header to `Indore, India • B.Tech CSE '25`, omitted unverified `"AWS Academy Cloud Developing"` pending a Credly link, and deployed live to `AgrShubham/AgrShubham` (`e09e7e5`).
 
 ---
 
