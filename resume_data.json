@@ -5,6 +5,7 @@
     "email": "shubhamagrawal.code@gmail.com",
     "github": "https://github.com/AgrShubham",
     "linkedin": "https://linkedin.com/in/shubham-agrawal-dev",
+    "portfolio": "https://shubham-agrawal-portfolio.vercel.app/",
     "location": "Indore, India (Open to Relocation / Remote)"
   },
   "education": [
@@ -39,7 +40,10 @@
       "React 19",
       "Next.js",
       "React Native",
+      "Expo",
       "Tailwind CSS",
+      "TanStack Query",
+      "Zustand",
       "Vite",
       "HTML5/CSS3"
     ],
@@ -48,20 +52,27 @@
       "Express",
       "Flask",
       "RESTful APIs",
+      "Server-Sent Events (SSE)",
       "WebSockets",
       "UDP Sockets",
-      "Win32 API"
+      "Win32 API",
+      "Zod"
     ],
     "cloudAndDb": [
       "PostgreSQL",
+      "Prisma ORM",
+      "SQLite (WAL)",
       "MySQL",
       "MongoDB",
       "Supabase",
       "AWS (EC2, S3, IAM)"
     ],
     "tools": [
+      "Docker",
+      "Vitest",
+      "Jest & Supertest",
       "Git",
-      "GitHub",
+      "GitHub Actions",
       "Linux / Bash",
       "Postman",
       "Android Studio"
@@ -83,10 +94,35 @@
   ],
   "projects": [
     {
+      "title": "KioskDrop Enterprise — Smart-Locker ITAM, FinOps & Mobile Platform",
+      "tech": "Next.js 14, React Native (Expo SDK 58), TypeScript, Prisma, PostgreSQL, SQLite WAL, SSE, Vitest, Jest, Docker",
+      "period": "Oct 2026 – Nov 2026",
+      "github": "https://github.com/AgrShubham/kioskdrop-mobile",
+      "live": "https://kioskdrop-enterprise.vercel.app/",
+      "bullets": [
+        "Eliminated race-condition locker double-bookings by engineering conditional atomic Prisma reservations (updateMany with count === 1 check), verified under a 20-worker parallel concurrency test.",
+        "Prevented PIN timing side-channels and BadUSB intrusions by implementing salted HMAC-SHA256 verification (crypto.timingSafeEqual), 5-attempt lockout (HTTP 423), foreign VID/PID quarantine (HTTP 409), and a SHA-256 hash-chained custody ledger.",
+        "Achieved zero IEEE-754 float drift on statutory tax compliance by building an integer-paise Indian Customs Duty Engine (44.40% BCD/SWS/IGST) alongside RBAC Zaggle/Happay FinOps and SAP/Oracle/Zoho ERP adapters.",
+        "Synchronized 12-bay hardware telemetry across Next.js 14 web dashboards and an Expo Android client (Bearer JWT in SecureStore + react-native-sse), backed by 39/39 Vitest backend tests and 24/24 Jest mobile tests."
+      ]
+    },
+    {
+      "title": "MiniLedger — Fintech Peer-to-Peer Loan Ledger & Mobile App",
+      "tech": "Node.js 20, Express, TypeScript, PostgreSQL 16, Prisma ORM, Expo (React Native), TanStack Query, Zod, Jest, Supertest",
+      "period": "Oct 2026",
+      "github": "https://github.com/AgrShubham/MiniLedger",
+      "bullets": [
+        "Prevented floating-point rounding drift and timezone overdue bugs by storing balances in integer minor units (amountMinor), aggregating sums in SQL, and enforcing date-only PostgreSQL (@db.Date) columns.",
+        "Eliminated duplicate loan repayments by implementing an atomic conditional updateMany state transition returning 409 Conflict (ALREADY_REPAID) and distinguishing ownership errors (404 Not Found).",
+        "Secured mobile authentication and receipt attachments by building HMAC-SHA256 rate-limited OTP + JWT auth (expo-secure-store) and UUID-sanitized Multer image uploads verified via an isolated Jest + Supertest suite."
+      ]
+    },
+    {
       "title": "Shree Mewa — Commercial Boutique & Gifting E-Commerce Store",
       "tech": "React 19, TypeScript 5.8, Tailwind CSS v4, Vite 6, Web Share API, Schema.org SEO",
       "period": "Sep 2026 – Present",
       "github": "https://github.com/AgrShubham/ShreeMewa",
+      "live": "https://shree-mewa.vercel.app/",
       "bullets": [
         "Architected and deployed a commercial bespoke gifting platform for a premier dry fruits boutique, translating complex bespoke packaging workflows into an interactive UI.",
         "Built a custom React state-driven hamper builder with real-time price calculation, dynamic box finish selection, and laser monogram preview.",
@@ -125,18 +161,26 @@
       "name": "AWS Academy Graduate - Cloud Foundations",
       "issuer": "AWS Academy",
       "credentialId": "1mNIxVxM",
+      "url": "https://www.credly.com/go/1mNIxVxM",
       "date": "Aug 2024"
     },
     {
       "name": "AWS Academy Graduate - Machine Learning Foundations",
       "issuer": "AWS Academy",
       "credentialId": "olUPF91W",
+      "url": "https://www.credly.com/go/olUPF91W",
       "date": "Mar 2025"
     },
     {
       "name": "React.js Essential Training",
       "issuer": "LinkedIn Learning",
+      "credentialId": "Adr69Q9vQcdM1iv-WezQ_t6Jqg4c",
       "date": "Apr 2023"
+    },
+    {
+      "name": "Learning Git and GitHub",
+      "issuer": "LinkedIn Learning",
+      "credentialId": "ATqCLCtXXqM5Eq40a6HkEg39tvoU"
     }
   ]
 }
