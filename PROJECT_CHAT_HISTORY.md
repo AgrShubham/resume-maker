@@ -1469,12 +1469,12 @@ ok
 
 #### 💡 Engineering Decisions & Deliverables
 1. **Detected & Replaced Broken `503` Stats Cards:** Both `github-readme-stats.vercel.app` cards on the live profile were returning `HTTP 503`. Replaced with `github-profile-summary-cards.vercel.app` (`Stats`) + `leetcard.jacoblin.cool` in one single side-by-side row (`200 OK`).
-2. **Compacted Visual Layout (~342 → 281 lines; ~45–50% shorter rendered vertical height):** Kept the Typing SVG hero, `flat-square` badges (adding **XERJ Corpus Hub** contributor badge), visible screenshot galleries, Mermaid flowcharts, 5-row skills matrix, and verified credentials while removing oversized `banner.jpg` headers, redundant highlight boxes, and stripped inline `style="..."` CSS.
+2. **Compacted Visual Layout (~342 → 225 lines; ~55% shorter rendered vertical height):** Kept the Typing SVG hero, `flat-square` badges (adding **XERJ Corpus Hub** contributor badge), visible screenshot galleries for Remote Trackpad & Shree Mewa, KioskDrop's horizontal Mermaid diagram, 4-row skills matrix, aligned `495×195` + `500×200` activity cards (`streak-stats` + `leetcard`), and a crisp Markdown table for MiniLedger, Remote Trackpad Web, and Interactive Portfolio while eliminating nested HTML tables, oversized `banner.jpg` headers, and stripped inline `style="..."` CSS.
 3. **Added Oct–Nov 2026 Projects & Filtered Noise:**
    - Added **KioskDrop Enterprise** (`kioskdrop-enterprise` + `kioskdrop-mobile` + Vercel demo + `v1.0.0` APK + `39 Vitest` & `24 Jest` tests) as Project #1.
-   - Added **MiniLedger** side-by-side with **Remote Trackpad Web** in a 50/50 2-column showcase.
+   - Added **MiniLedger**, **Remote Trackpad Web**, and **Interactive Portfolio** in a clean 3-column Markdown showcase table.
    - Kept tutorial clones (`Chef-Claude`, `MemeGenerator`), take-home assignments, and achievement automation utilities off the flagship profile.
-4. **Factual Hygiene & Live Deployment:** Corrected location header to `Indore, India • B.Tech CSE '25`, omitted unverified `"AWS Academy Cloud Developing"` pending a Credly link, and deployed live to `AgrShubham/AgrShubham` (`e09e7e5`).
+4. **Factual Hygiene & Live Deployment:** Corrected location header to `Indore, India • B.Tech CSE '25`, omitted unverified `"AWS Academy Cloud Developing"` pending a Credly link, and deployed live to `AgrShubham/AgrShubham` (`42a358b`, synced in `resume-maker` `2c02734`).
 
 ---
 
